@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{name}}</title>
+    <link type="text/css" rel="stylesheet/less" href="styles/main.less">
+  </head>
+
+  <body>
+    <div id="wrapper"></div>
+
+    <script type="text/javascript" src="vendor/less.js"></script>
+    <script type="text/javascript" src="vendor/react.js"></script>
+    <script type="text/javascript" src="out/goog/base.js"></script>
+    <script type="text/javascript" src="{{sanitized}}.js"></script>
+    <script type="text/javascript">goog.require("{{sanitized}}.app");</script>
+  </body>
+</html>

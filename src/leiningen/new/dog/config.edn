@@ -1,0 +1,4 @@
+{:development {:app-name "{{name}}"
+               :urls {}}
+ :production  {:app-name "{{name}}"
+               :urls {}}}
