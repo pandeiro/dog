@@ -1,4 +1,4 @@
-(defproject dog/lein-template "0.2.2"
+(defproject dog/lein-template "0.3.0"
   :description "A template for generating a single-page-app skeleton
 that uses ClojureScript, including core.async and reagent, and the CSS
 pre-processor LessCSS.
@@ -7,7 +7,8 @@ Design goals:
 
 - Rapid development cycle including live reloading on changes
 - Semi-automated production builds with minification
-- Environment-sensitive URL configurability via a config file"
+- Environment-sensitive URL configurability via a config file
+- Basic app skeleton with routing views and ajax readily available"
 
   :url "https://github.com/pandeiro/dog"
 
