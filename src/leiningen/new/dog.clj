@@ -24,7 +24,6 @@
      ["src/cljs/{{sanitized}}/util/routing.cljs" (render "routing.cljs" data)]
 
      ["app/styles/normalize.css"             (render "normalize.css")]
-     ["app/styles/pure-min.css"              (render "pure-min.css")]
      ["app/styles/main.less"                 (render "main.less")]
      ["app/vendor/less.js"                   (io/reader (io/resource "META-INF/resources/webjars/less/1.7.0/less.js"))]
      ["app/vendor/react.js"                  (io/reader (io/resource "reagent/react.js"))]
