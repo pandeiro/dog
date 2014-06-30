@@ -4,14 +4,14 @@ A Leiningen template for ClojureScript applications
 
 ## Design goals
 
-### Development
+### For Development
 
 - Rapid development cycle including live reloading on file changes
 - Built-in Ring dev server
 - Built-in ClojureScript libs Core.async and Reagent (ReactJS)
 - Built-in LessCSS compilation in development (in-browser) and production (lessc)
 
-### Deployment
+### For Deployment
 
 - Environment-sensitive URL configurability via a config file
 - Semi-automated* production builds with minification
@@ -52,7 +52,7 @@ to the dist/ folder:
 - styles.css
 
 Remember that any changes to app/index.html will not be reflected
-in dist/index.html -- transporting those is up to you for now.
+in dist/index.html -- transporting those is up to you, for now.
 
 ## License
 
