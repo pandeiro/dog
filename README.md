@@ -99,7 +99,7 @@ in :production.
 
 (defn render-app []
   (let [wrapper (.getElementById js/document "wrapper")]
-    (render-component (condp (:view @app-state) =
+    (render-component (condp = (:view @app-state)
                         :main    [main-view]
                         :options [options-view])
                       wrapper)))
