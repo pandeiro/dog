@@ -10,6 +10,7 @@ A Leiningen template for ClojureScript applications
 - Built-in [Ring dev server](https://github.com/weavejester/lein-ring)
 - Built-in ClojureScript libs [core.async](https://clojure.github.io/core.async/) and [reagent](https://github.com/holmsand/reagent) (ReactJS)
 - Built-in [LessCSS](http://lesscss.org/) compilation in development (in-browser) and production (lessc)
+- Built-in client-side routing with [secretary](https://github.com/gf3/secretary) and [Google Closure History](http://docs.closure-library.googlecode.com/git/class_goog_History.html)
 
 ### For Deployment
 
