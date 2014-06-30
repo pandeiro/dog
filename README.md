@@ -7,9 +7,9 @@ A Leiningen template for ClojureScript applications
 ### For Development
 
 - Rapid development cycle including live reloading on file changes
-- Built-in Ring dev server
-- Built-in ClojureScript libs Core.async and Reagent (ReactJS)
-- Built-in LessCSS compilation in development (in-browser) and production (lessc)
+- Built-in [Ring dev server](https://github.com/weavejester/lein-ring)
+- Built-in ClojureScript libs [core.async](https://clojure.github.io/core.async/) and [reagent](https://github.com/holmsand/reagent) (ReactJS)
+- Built-in [LessCSS](http://lesscss.org/) compilation in development (in-browser) and production (lessc)
 
 ### For Deployment
 
