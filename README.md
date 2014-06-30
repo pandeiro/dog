@@ -50,18 +50,22 @@ like this:
 
 #### Namespace declaration
 
-    (ns mywebapp.app
-      (:require-macros [cljs.core.async.macros :refer [go]]
-                       [testy.macros :refer [resolve-config set-window-onload!]])
-      (:require [cljs.core.async :as async :refer [chan put! <! >!]]
-                [reagent.core :as r :refer [render-component]]
-                [testy.util.routing :refer [defroute enable-routes]]
-                [testy.util.xhr :as xhr :refer [get-edn post-edn! put-edn!]]))
-    
+```clojure
+(ns mywebapp.app
+  (:require-macros [cljs.core.async.macros :refer [go]]
+                   [testy.macros :refer [resolve-config set-window-onload!]])
+  (:require [cljs.core.async :as async :refer [chan put! <! >!]]
+            [reagent.core :as r :refer [render-component]]
+            [testy.util.routing :refer [defroute enable-routes]]
+            [testy.util.xhr :as xhr :refer [get-edn post-edn! put-edn!]]))
+```
+
 #### Static configuration
 
-    ;; --- Config (imports config.edn)
-    (def config (resolve-config))
+```clojure
+;; --- Config (imports config.edn)
+(def config (resolve-config))
+```
 
 Placing your configuration in a file called `config.edn`, containing a map
 with :development and :production keys, allows the client-side application to
@@ -71,42 +75,47 @@ in :production.
 
 #### Application state and routing
 
-    ;; --- State
-    (def app-state (r/atom {:view :main}))
-    
-    ;; --- Routes
-    (defroute "/main" []
-      (swap! app-state assoc :view :main))
-    
-    (defroute "/options" []
-      (swap! app-state assoc :view :options))
-    
-    (enable-routes)
-    
+```clojure
+;; --- State
+(def app-state (r/atom {:view :main}))
+
+;; --- Routes
+(defroute "/main" []
+  (swap! app-state assoc :view :main))
+
+(defroute "/options" []
+  (swap! app-state assoc :view :options))
+
+(enable-routes)
+```
+
 #### Views
 
-    ;; --- Views
-    (def main-view [:div#main [:h1 "Main View"]])
-    
-    (def options-view [:div#options [:h1 "Options View"]])
-    
-    (defn render-app []
-      (let [wrapper (.getElementById js/document "wrapper")]
-        (render-component (condp (:view @app-state) =
-                            :main    [main-view]
-                            :options [options-view])
-                          wrapper)))
-    
-    
+```clojure
+;; --- Views
+(def main-view [:div#main [:h1 "Main View"]])
+
+(def options-view [:div#options [:h1 "Options View"]])
+
+(defn render-app []
+  (let [wrapper (.getElementById js/document "wrapper")]
+    (render-component (condp (:view @app-state) =
+                        :main    [main-view]
+                        :options [options-view])
+                      wrapper)))
+```
+
 #### Entry
 
-    (defn init
-      "A single entrypoint for the application"
-      []
-      (render-app))
-    
-    (.addEventListener js/window "DOMContentLoaded" init)
-    
+```clojure
+(defn init
+  "A single entrypoint for the application"
+  []
+  (render-app))
+
+(.addEventListener js/window "DOMContentLoaded" init)
+```
+
 On saving any file in `src/` or `app/`, ClojureScript will be re-compiled incrementally
 and the browser will refresh.
 
