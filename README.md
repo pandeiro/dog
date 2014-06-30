@@ -25,6 +25,13 @@ ClojureScript compilation and minification are automated, except for external Ja
 libraries, which should be added to the relevant :preamble vectors in the
 production cljsbuild within project.clj.)
 
+## External Dependencies
+
+- [Leiningen](https://github.com/technomancy/leiningen)
+- [Less.js](http://lesscss.org/) CSS preprocessor (for production compilation only)
+
+(JavaScript dependencies, ReactJS and Less.js, are bundled with the template.)
+
 ## Usage
 
 ### Development
