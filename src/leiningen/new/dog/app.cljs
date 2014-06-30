@@ -39,6 +39,5 @@
   []
   (render-app))
 
-(set-window-onload! init)
-
+(.addEventListener js/window "DOMContentLoaded" init)
 
