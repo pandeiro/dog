@@ -53,7 +53,7 @@ like this:
 ```clojure
 (ns mywebapp.app
   (:require-macros [cljs.core.async.macros :refer [go]]
-                   [testy.macros :refer [resolve-config set-window-onload!]])
+                   [testy.macros :refer [resolve-config]])
   (:require [cljs.core.async :as async :refer [chan put! <! >!]]
             [reagent.core :as r :refer [render-component]]
             [testy.util.routing :refer [defroute enable-routes]]
