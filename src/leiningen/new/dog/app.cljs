@@ -1,6 +1,6 @@
 (ns {{sanitized}}.app
   (:require-macros [cljs.core.async.macros :refer [go]]
-                   [{{sanitized}}.macros :refer [resolve-config set-window-onload!]])
+                   [{{sanitized}}.macros :refer [resolve-config]])
   (:require [cljs.core.async :as async :refer [chan put! <! >!]]
             [reagent.core :as r :refer [render-component]]
             [{{sanitized}}.util.routing :refer [defroute enable-routes]]
