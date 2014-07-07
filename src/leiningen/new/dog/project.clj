@@ -12,7 +12,7 @@
   :source-paths ["src/clj"]
 
   :plugins [[lein-cljsbuild "1.0.3"]
-            [lein-ring "0.8.10"]]
+            [lein-ring "0.8.11"]]
 
   :resources-paths ["app"]
 
