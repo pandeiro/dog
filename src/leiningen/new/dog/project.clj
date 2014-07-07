@@ -4,7 +4,7 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [ring/ring-core "1.2.2"]
                  [ring-refresh "0.1.1"]
-                 [org.clojure/clojurescript "0.0-2227"]
+                 [org.clojure/clojurescript "0.0-2268"]
                  [org.clojure/core.async "0.1.303.0-886421-alpha"]
                  [reagent "0.4.2"]
                  [secretary "1.1.1"]]
