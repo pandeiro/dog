@@ -1,4 +1,4 @@
-(ns {{sanitized}}.macros
+(ns {{name}}.macros
   (:require [clojure.edn :as edn]))
 
 (defmacro resolve-config

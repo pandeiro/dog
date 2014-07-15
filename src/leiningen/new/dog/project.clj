@@ -16,12 +16,12 @@
 
   :resources-paths ["app"]
 
-  :ring {:handler {{sanitized}}.dev-server/handler}
+  :ring {:handler {{name}}.dev-server/handler}
 
   :cljsbuild
   {:builds [{:id           "dev"
              :source-paths ["src/clj" "src/cljs"]
-             :compiler     {:output-to     "app/{{sanitized}}.js"
+             :compiler     {:output-to     "app/{{name}}.js"
                             :output-dir    "app/out"
                             :optimizations :none
                             :source-map    true}}

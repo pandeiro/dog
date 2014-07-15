@@ -1,6 +1,6 @@
 */target
 /app/out
-/app/{{sanitized}}.js
+/app/{{name}}.js
 /dist
 /target
 /classes

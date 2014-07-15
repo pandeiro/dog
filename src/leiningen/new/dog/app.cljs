@@ -1,11 +1,11 @@
-(ns {{sanitized}}.app
+(ns {{name}}.app
   (:require-macros [cljs.core.async.macros :refer [go]]
-                   [{{sanitized}}.macros :refer [resolve-config]])
+                   [{{name}}.macros :refer [resolve-config]])
   (:require [cljs.core.async :as async :refer [chan put! <! >!]]
             [reagent.core :as r :refer [render-component]]
             [secretary.core :refer [defroute] :include-macros true]
-            [{{sanitized}}.util.routing :refer [enable-routes]]
-            [{{sanitized}}.util.xhr :as xhr :refer [get-edn post-edn! put-edn!]]))
+            [{{name}}.util.routing :refer [enable-routes]]
+            [{{name}}.util.xhr :as xhr :refer [get-edn post-edn! put-edn!]]))
 
 ;; --- Config (imports config.edn)
 (def config (resolve-config))

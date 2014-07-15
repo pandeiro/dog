@@ -1,4 +1,4 @@
-(ns {{sanitized}}.util.xhr
+(ns {{name}}.util.xhr
   (:require [cljs.reader :refer [read-string]]
             [goog.net.XhrIo :as xhr]))
 

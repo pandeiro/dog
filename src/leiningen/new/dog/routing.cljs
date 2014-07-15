@@ -1,4 +1,4 @@
-(ns {{sanitized}}.util.routing
+(ns {{name}}.util.routing
   (:require [secretary.core :as secretary :include-macros true]
             [goog.events :as events]
             [goog.history.EventType :as EventType])

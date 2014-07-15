@@ -1,4 +1,4 @@
-(ns {{sanitized}}.dev-server
+(ns {{name}}.dev-server
   (:require [clojure.string            :as s]
             [ring.util.response        :as resp-util]
             [ring.middleware.file-info :as file-util]
