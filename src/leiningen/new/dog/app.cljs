@@ -3,7 +3,8 @@
                    [{{sanitized}}.macros :refer [resolve-config]])
   (:require [cljs.core.async :as async :refer [chan put! <! >!]]
             [reagent.core :as r :refer [render-component]]
-            [{{sanitized}}.util.routing :refer [defroute enable-routes]]
+            [secretary.core :refer [defroute] :include-macros true]
+            [{{sanitized}}.util.routing :refer [enable-routes]]
             [{{sanitized}}.util.xhr :as xhr :refer [get-edn post-edn! put-edn!]]))
 
 ;; --- Config (imports config.edn)

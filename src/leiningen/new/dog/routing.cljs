@@ -4,8 +4,6 @@
             [goog.history.EventType :as EventType])
   (:import goog.History))
 
-(def defroute secretary/defroute)
-
 (defn enable-routes
   "Enables history updates on hashtag change"
   []
