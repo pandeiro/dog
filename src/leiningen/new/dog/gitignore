@@ -1,6 +1,7 @@
 */target
 /app/out
 /app/{{sanitized}}.js
+/dist
 /target
 /classes
 /checkouts
