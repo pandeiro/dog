@@ -26,7 +26,7 @@
                             :optimizations :none
                             :source-map    true}}
             {:id           "production"
-             :source-paths ["src/clj" "src/cljs"]
+             :source-paths ["src/clj" "src/cljs" "app/vendor"]
              :compiler     {:output-to        "dist/app.js"
                             :optimizations    :advanced
                             :externs          ["reagent/react.js"]
