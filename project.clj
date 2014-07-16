@@ -12,7 +12,7 @@ Design goals:
 
   :url "https://github.com/pandeiro/dog"
 
-  :dependencies [[org.webjars/less "1.7.0"]
+  :dependencies [[org.webjars/less "1.7.3"]
                  ;; Use the React version that ships with reagent
                  [reagent "0.4.2" :exclusions [org.clojure/clojure
                                                org.clojure/clojurescript]]]
