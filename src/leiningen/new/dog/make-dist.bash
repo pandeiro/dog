@@ -20,3 +20,8 @@ echo
 
 ENV=production lein cljsbuild once production
 
+echo
+echo "Packaging assets..."
+echo
+
+tar czf target/{{name}}.tar.gz dist
