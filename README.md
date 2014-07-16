@@ -52,6 +52,10 @@ This results in the following minified files:
 - dist/app.js
 - dist/styles.css
 
+...and a tarball artifact, in case that helps:
+
+- target/mywebapp.tar.gz
+
 ## License
 
 Released unencumbered into the public domain
