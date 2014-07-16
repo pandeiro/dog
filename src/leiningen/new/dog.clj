@@ -9,7 +9,8 @@
   "Output the template"
   [name]
   (let [data {:name name
-              :sanitized (name-to-path name)}]
+              :sanitized (name-to-path name)}
+        less-jar-path "META-INF/resources/webjars/less/1.7.3/less.js"]
     (main/info (str "Generated a new ClojureScript project in " (:sanitized data)))
     (->files
      data
@@ -25,7 +26,7 @@
 
      ["app/styles/normalize.css"             (render "normalize.css")]
      ["app/styles/main.less"                 (render "main.less")]
-     ["app/vendor/less.js"                   (io/reader (io/resource "META-INF/resources/webjars/less/1.7.0/less.js"))]
+     ["app/vendor/less.js"                   (io/reader (io/resource less-jar-path))]
      ["app/vendor/react.js"                  (io/reader (io/resource "reagent/react.js"))]
      ["app/index.html"                       (render "index-dev.html" data)]
 
