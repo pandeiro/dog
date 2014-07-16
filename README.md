@@ -16,16 +16,7 @@ A Leiningen template for ClojureScript applications
 ### For Deployment
 
 - Environment-sensitive URL configurability via a config file
-- Semi-automated* production builds with minification
-
-(There is no automated HTML file generation; for now, the template simply
-generates both development and production versions of index.html. Any changes to the
-HTML skeleton must be propagated manually from app/index.html to dist/index.html if you
-are packaging for distribution.)
-
-ClojureScript compilation and minification are automated, except for external JavaScript
-libraries, which should be added to the relevant :preamble vectors in the
-production cljsbuild within project.clj.)
+- Automated production builds with minification of HTML, ClojureScript and Less
 
 ## External Dependencies
 
@@ -45,79 +36,9 @@ web server and ClojureScript auto-compilation:
     cd mywebapp
     ./bin/dev-server
 
-Open up src/cljs/mywebapp/app.cljs and begin hacking. It will look something
-like this:
-
-#### Namespace declaration
-
-```clojure
-(ns mywebapp.app
-  (:require-macros [cljs.core.async.macros :refer [go]]
-                   [testy.macros :refer [resolve-config]])
-  (:require [cljs.core.async :as async :refer [chan put! <! >!]]
-            [reagent.core :as r :refer [render-component]]
-            [testy.util.routing :refer [defroute enable-routes]]
-            [testy.util.xhr :as xhr :refer [get-edn post-edn! put-edn!]]))
-```
-
-#### Static configuration
-
-```clojure
-;; --- Config (imports config.edn)
-(def config (resolve-config))
-```
-
-Placing your configuration in a file called `config.edn`, containing a map
-with :development and :production keys, allows the client-side application to
-use different static configuration depending on its environment. The
-`./bin/make-dist` script will automatically configure this data using the map
-in :production.
-
-#### Application state and routing
-
-```clojure
-;; --- State
-(def app-state (r/atom {:view :main}))
-
-;; --- Routes
-(defroute "/main" []
-  (swap! app-state assoc :view :main))
-
-(defroute "/options" []
-  (swap! app-state assoc :view :options))
-
-(enable-routes)
-```
-
-#### Views
-
-```clojure
-;; --- Views
-(def main-view [:div#main [:h1 "Main View"]])
-
-(def options-view [:div#options [:h1 "Options View"]])
-
-(defn render-app []
-  (let [wrapper (.getElementById js/document "wrapper")]
-    (render-component (condp = (:view @app-state)
-                        :main    [main-view]
-                        :options [options-view])
-                      wrapper)))
-```
-
-#### Entry
-
-```clojure
-(defn init
-  "A single entrypoint for the application"
-  []
-  (render-app))
-
-(.addEventListener js/window "DOMContentLoaded" init)
-```
-
-On saving any file in `src/` or `app/`, ClojureScript will be re-compiled incrementally
-and the browser will refresh.
+This will serve the current project at http://localhost:3000,
+auto-compile ClojureScript and auto-refresh on changes to the
+`app` directory.
 
 ### Production
 
@@ -125,14 +46,11 @@ To package a project into production assets:
 
     ./bin/make-dist
 
-This will result in two compiled, minified files being added
-to the dist/ folder:
+This results in the following minified files:
 
-- app.js
-- styles.css
-
-Remember that any changes to app/index.html will not be reflected
-in dist/index.html -- transporting those is up to you, for now.
+- dist/index.html
+- dist/app.js
+- dist/styles.css
 
 ## License
 

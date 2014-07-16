@@ -21,6 +21,12 @@ echo
 ENV=production lein cljsbuild once production
 
 echo
+echo "Transforming and minifying HTML..."
+echo
+
+lein run -m {{name}}.html
+
+echo
 echo "Packaging assets..."
 echo
 
