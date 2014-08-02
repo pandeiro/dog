@@ -20,11 +20,19 @@ echo
 
 ENV=production lein cljsbuild once production
 
+if [ $1 != 0 ]; then
+    exit 1
+fi
+
 echo
 echo "Transforming and minifying HTML..."
 echo
 
 lein run -m {{name}}.html
+
+if [ $1 != 0 ]; then
+    exit 1
+fi
 
 echo
 echo "Packaging assets..."
