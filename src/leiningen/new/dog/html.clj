@@ -47,4 +47,5 @@
         (println "Transforming and minifying" filename "...")
         (spit (str "dist/" filename)
               (minify-html (transform-html content tag)))))
+    (println)
     (System/exit 0)))
