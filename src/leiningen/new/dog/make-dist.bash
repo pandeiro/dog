@@ -27,12 +27,8 @@ echo
 echo "Compiling ClojureScript..."
 echo
 
-ENV=production try lein cljsbuild once production || exit 1
+ENV=production try lein cljsbuild once production &> /dev/null || exit 1
 
-
-echo
-echo "Transforming and minifying HTML..."
-echo
 
 try lein run -m {{name}}.html || exit 1
 
