@@ -1,5 +1,14 @@
 #!/bin/bash
 
+function try {
+    "$@"
+    local status=$?
+    if [ $status -ne 0 ]; then
+        echo "error with $1" >&2
+    fi
+    return $status
+}
+
 lesscss=$(which lessc)
 
 if [ -z "$lesscss" ]; then
@@ -11,31 +20,24 @@ else
     echo "Compiling and minifying Less..."
     echo
 
-    lessc -x app/styles/main.less > dist/styles.css
+    try lessc -x app/styles/main.less > dist/styles.css
 fi
 
 echo
 echo "Compiling ClojureScript..."
 echo
 
-ENV=production lein cljsbuild once production
+ENV=production try lein cljsbuild once production
 
-if [ $1 != 0 ]; then
-    exit 1
-fi
 
 echo
 echo "Transforming and minifying HTML..."
 echo
 
-lein run -m {{name}}.html
-
-if [ $1 != 0 ]; then
-    exit 1
-fi
+try lein run -m {{name}}.html
 
 echo
 echo "Packaging assets..."
 echo
 
-tar czf target/{{name}}.tar.gz dist
+try tar czf target/{{name}}.tar.gz dist
