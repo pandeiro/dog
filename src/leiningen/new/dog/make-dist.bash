@@ -20,24 +20,24 @@ else
     echo "Compiling and minifying Less..."
     echo
 
-    try lessc -x app/styles/main.less > dist/styles.css
+    try lessc -x app/styles/main.less > dist/styles.css || exit 1
 fi
 
 echo
 echo "Compiling ClojureScript..."
 echo
 
-ENV=production try lein cljsbuild once production
+ENV=production try lein cljsbuild once production || exit 1
 
 
 echo
 echo "Transforming and minifying HTML..."
 echo
 
-try lein run -m {{name}}.html
+try lein run -m {{name}}.html || exit 1
 
 echo
 echo "Packaging assets..."
 echo
 
-try tar czf target/{{name}}.tar.gz dist
+try tar czf target/{{name}}.tar.gz dist || exit 1
