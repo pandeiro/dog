@@ -12,7 +12,7 @@
 (defn tagged
   "Adds a querystring from git rev for cache-busting"
   [x tag]
-  (str x (when tag (str "?ref=" tag))))
+  (str x (when tag (str "?rev=" tag))))
 
 (defn transform-html
   "Replaces script tags and LessCSS links with distribution versions"
@@ -40,7 +40,7 @@
   "Transforms and minifies any HTML assets"
   [& args]
   (let [html-files (->> "app" io/file file-seq (filter html-file?))
-        tag        (when (has-git?) (git-ref))]
+        tag        (when (has-git?) (git-rev))]
     (doseq [file html-files]
       (let [filename (.getName file)
             content  (slurp file)]
