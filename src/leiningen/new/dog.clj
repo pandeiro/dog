@@ -15,7 +15,7 @@
     (->files
      data
      ["project.clj"                          (render "project.clj" data)]
-     ["config.edn"                           (render "config.edn" data)]
+     ["config.edn.sample"                    (render "config.edn" data)]
      [".gitignore"                           (render "gitignore" data)]
 
      ["src/clj/{{sanitized}}/dev_server.clj" (render "dev_server.clj" data)]

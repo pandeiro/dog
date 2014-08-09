@@ -50,7 +50,7 @@ The following project structure will be generated:
     ├── bin
     │   ├── dev-server
     │   └── make-dist
-    ├── config.edn
+    ├── config.edn.sample
     ├── dist
     │   └── index.html
     ├── project.clj
@@ -68,6 +68,10 @@ The following project structure will be generated:
                     └── xhr.cljs
 
 ### Beginning
+
+If you plan to use configurable URLs that are different in development
+and production, you should first copy `config.edn.sample` to `config.edn`
+(which will be gitignored).
 
     cd mywebapp
     ./bin/dev-server
