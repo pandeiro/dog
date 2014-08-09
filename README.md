@@ -33,6 +33,41 @@ To create a new project and start the live development
 web server and ClojureScript auto-compilation:
 
     lein new dog mywebapp
+
+### Scaffolding
+
+The following project structure will be generated:
+    .
+    ├── app
+    │   ├── index.html
+    │   ├── styles
+    │   │   ├── main.less
+    │   │   └── normalize.css
+    │   └── vendor
+    │       ├── less.js
+    │       └── react.js
+    ├── bin
+    │   ├── dev-server
+    │   └── make-dist
+    ├── config.edn
+    ├── dist
+    │   └── index.html
+    ├── project.clj
+    └── src
+        ├── clj
+        │   └── mywebapp
+        │       ├── dev_server.clj
+        │       ├── html.clj
+        │       └── macros.clj
+        └── cljs
+            └── mywebapp
+                ├── app.cljs
+                └── util
+                    ├── routing.cljs
+                    └── xhr.cljs
+
+### Beginning
+
     cd mywebapp
     ./bin/dev-server
 
@@ -48,7 +83,7 @@ To package a project into production assets:
 
 This results in the following minified files:
 
-- dist/index.html
+- dist/index.html (and minified versions of any other HTML files found in app/)
 - dist/app.js
 - dist/styles.css
 
