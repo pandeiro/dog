@@ -34,9 +34,10 @@ web server and ClojureScript auto-compilation:
 
     lein new dog mywebapp
 
-### Scaffolding
+### Output
 
 The following project structure will be generated:
+
     .
     ├── app
     │   ├── index.html
