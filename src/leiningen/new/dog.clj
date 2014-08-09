@@ -40,6 +40,7 @@
       (main/info "")
       (main/info "Development:")
       (main/info (str "cd " (:sanitized data)))
+      (main/info "cp config.edn.sample config.edn")
       (main/info "./bin/dev-server")
       (main/info "")
       (main/info "Distribution:")
