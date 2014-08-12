@@ -31,10 +31,8 @@
 (defn minify-html
   "Uses https://code.google.com/p/htmlcompressor/ to minify HTML"
   [html]
-  (doto (HtmlCompressor.)
-    (.setRemoveIntertagSpaces true)
-    (.compress html)))
-
+  (->> html (.compress (doto (HtmlCompressor.)
+                         (.setRemoveIntertagSpaces true)))))
 
 (defn -main
   "Transforms and minifies any HTML assets"
