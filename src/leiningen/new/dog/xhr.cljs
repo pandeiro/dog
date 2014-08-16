@@ -10,7 +10,9 @@
   (xhr/send url #(f (response->edn %))))
 
 (defn put-edn! [url data f]
-  (xhr/send url "PUT" nil nil #(f (response->edn %))))
+  (xhr/send url  #(f (response->edn %))
+            "PUT" nil nil))
 
 (defn post-edn! [url data f]
-  (xhr/send url "POST" nil nil #(f (response->edn %))))
+  (xhr/send url #(f (response->edn %))
+            "POST" nil nil))
