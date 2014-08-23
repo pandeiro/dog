@@ -1,4 +1,4 @@
-(ns {{name}}.html
+(ns {{name}}.dev.html
   (:require [clojure.java.io        :as io]
             [clojure.string         :as s]
             [clojure.java.shell     :refer [sh]]
