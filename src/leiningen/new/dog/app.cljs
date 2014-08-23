@@ -6,29 +6,22 @@
             [weasel.repl :as repl]
             [{{name}}.util.xhr :as xhr :refer [get-edn post-edn! put-edn!]]))
 
-;; --- Browser REPL
 (try
   (repl/connect "ws://localhost:9001" :verbose true)
   (catch :default e nil))
 
-;; --- Config (imports config.edn)
 (def config (resolve-config))
 
-;; --- State
-(def app-state (r/atom {:view :main}))
+(def app-state (r/atom {:view  :main
+                        :title (str "Welcome to " "{{name}}")}))
 
-;; --- Views
-(def main-view [:div#main [:h1 "Main View"]])
-
-(def options-view [:div#options [:h1 "Options View"]])
+(defn main-view [state-atom]
+  [:div#main
+   [:h1 (:title @state-atom)]])
 
 (defn render-app []
   (let [wrapper (.getElementById js/document "wrapper")]
-    (render-component (condp = (:view @app-state)
-                        :main    [main-view]
-                        :options [options-view])
-                      wrapper)))
-
+    (render-component [main-view app-state] wrapper)))
 
 (defn init
   "A single entrypoint for the application"
