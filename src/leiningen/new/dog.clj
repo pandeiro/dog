@@ -23,7 +23,6 @@
      ["src/clj/{{sanitized}}/macros.clj"     (render "macros.clj" data)]
      ["src/cljs/{{sanitized}}/app.cljs"      (render "app.cljs" data)]
      ["src/cljs/{{sanitized}}/util/xhr.cljs"     (render "xhr.cljs" data)]
-     ["src/cljs/{{sanitized}}/util/routing.cljs" (render "routing.cljs" data)]
 
      ["app/styles/normalize.css"             (render "normalize.css")]
      ["app/styles/main.less"                 (render "main.less")]
