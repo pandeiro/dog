@@ -6,8 +6,8 @@
                  [ring-refresh "0.1.1"]
                  [enlive "1.1.5"]
                  [com.googlecode.htmlcompressor/htmlcompressor "1.4"]
-                 [org.clojure/clojurescript "0.0-2307"]
-                 [org.clojure/core.async "0.1.303.0-886421-alpha"]
+                 [org.clojure/clojurescript "0.0-2311"]
+                 [org.clojure/core.async "0.1.338.0-5c5012-alpha"]
                  [reagent "0.4.2"]]
 
   :source-paths ["src/clj"]
