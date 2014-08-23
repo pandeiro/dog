@@ -20,8 +20,8 @@
    [:h1 (:title @state-atom)]])
 
 (defn render-app []
-  (let [wrapper (.getElementById js/document "wrapper")]
-    (render-component [main-view app-state] wrapper)))
+  (let [dom-root (.getElementById js/document "root")]
+    (render-component [main-view app-state] dom-root)))
 
 (defn init
   "A single entrypoint for the application"
