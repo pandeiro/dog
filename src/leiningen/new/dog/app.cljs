@@ -6,9 +6,7 @@
             [weasel.repl :as repl]
             [{{name}}.util.xhr :as xhr :refer [get-edn post-edn! put-edn!]]))
 
-(try
-  (repl/connect "ws://localhost:9001" :verbose true)
-  (catch :default e nil))
+; (repl/connect "ws://localhost:9001" :verbose true)
 
 (def config (resolve-config))
 
