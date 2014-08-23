@@ -3,7 +3,13 @@
                    [{{name}}.macros :refer [resolve-config]])
   (:require [cljs.core.async :as async :refer [chan put! <! >!]]
             [reagent.core :as r :refer [render-component]]
+            [weasel.repl :as repl]
             [{{name}}.util.xhr :as xhr :refer [get-edn post-edn! put-edn!]]))
+
+;; --- Browser REPL
+(try
+  (repl/connect "ws://localhost:9001" :verbose true)
+  (catch :default e nil))
 
 ;; --- Config (imports config.edn)
 (def config (resolve-config))

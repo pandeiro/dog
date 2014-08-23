@@ -8,6 +8,8 @@
                  [ring-refresh "0.1.1"]
                  [enlive "1.1.5"]
                  [com.googlecode.htmlcompressor/htmlcompressor "1.4"]
+                 [com.cemerick/piggieback "0.1.3"]
+                 [weasel "0.4.0-SNAPSHOT"]
                  [reagent "0.4.2"]]
 
   :source-paths ["src/clj"]
