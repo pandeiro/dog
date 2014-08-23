@@ -50,16 +50,16 @@ The following project structure will be generated:
     ├── bin
     │   ├── dev-server
     │   └── make-dist
-    ├── config.edn.sample
-    ├── dist
-    │   └── index.html
+    ├── config.edn
     ├── project.clj
     └── src
         ├── clj
         │   └── mywebapp
-        │       ├── dev_server.clj
-        │       ├── html.clj
-        │       └── macros.clj
+        │       ├── dev
+        │       │   ├── server.clj
+        │       │   ├── html.clj
+        │       │   └── repl.clj
+        │       └── config.clj
         └── cljs
             └── mywebapp
                 ├── app.cljs
