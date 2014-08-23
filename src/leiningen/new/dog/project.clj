@@ -21,6 +21,8 @@
 
   :ring {:handler {{name}}.dev-server/handler}
 
+  :repl-options {:init-ns {{name}}.repl}
+
   :cljsbuild
   {:builds [{:id           "dev"
              :source-paths ["src/clj" "src/cljs"]
