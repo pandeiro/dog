@@ -30,8 +30,6 @@
      ["app/vendor/react.js"                  (io/reader (io/resource "reagent/react.js"))]
      ["app/index.html"                       (render "index-dev.html" data)]
 
-     ["dist/index.html"                      (render "index-production.html" data)]
-
      ["bin/dev-server"                       (render "dev-server.bash" data) :executable true]
      ["bin/make-dist"                        (render "make-dist.bash" data)  :executable true])
     
