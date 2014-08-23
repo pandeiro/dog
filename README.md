@@ -87,11 +87,11 @@ To package a project into production assets:
 
     ./bin/make-dist
 
-This results in the following minified files:
+This results in the following files:
 
-- dist/index.html (and minified versions of any other HTML files found in app/)
-- dist/app.js
-- dist/styles.css
+- dist/*.html     : minified versions of any HTML files found in app/
+- dist/app.js     : minified compiled javascript
+- dist/styles.css : minified compiled css
 
 ...and a tarball artifact, in case that helps:
 
