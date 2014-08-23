@@ -2,7 +2,7 @@
   (:require [clojure.edn :as edn]
             [clojure.java.io :as io]))
 
-(defmacro resolve
+(defmacro resolve-config
   "Allows for a static configuration file with, eg
 different URLs for use with development and production
 environment services."

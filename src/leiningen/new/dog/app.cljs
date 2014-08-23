@@ -1,6 +1,6 @@
 (ns {{name}}.app
   (:require-macros [cljs.core.async.macros :refer [go]]
-                   [{{name}}.config :as config])
+                   [{{name}}.config :refer [resolve-config]])
   (:require [cljs.core.async :as async :refer [chan put! <! >!]]
             [reagent.core :as r :refer [render-component]]
             [weasel.repl :as repl]
@@ -8,7 +8,7 @@
 
 ; (repl/connect "ws://localhost:9001" :verbose true)
 
-(def cfg (config/resolve))
+(def config (resolve-config))
 
 (def app-state (r/atom {:view  :main
                         :title (str "Welcome to " "{{name}}")}))
