@@ -21,7 +21,7 @@
 
   :ring {:handler {{name}}.dev.server/handler}
 
-  :repl-options {:init-ns {{name}}.repl}
+  :repl-options {:init-ns {{name}}.dev.repl}
 
   :cljsbuild
   {:builds [{:id           "dev"
