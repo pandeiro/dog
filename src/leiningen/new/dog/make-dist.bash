@@ -30,7 +30,7 @@ echo
 ENV=production try lein cljsbuild once production &> /dev/null || exit 1
 
 
-try lein run -m {{name}}.html || exit 1
+try lein run -m {{name}}.dev.html || exit 1
 
 echo
 echo "Packaging assets..."

@@ -19,7 +19,7 @@
 
   :resources-paths ["app"]
 
-  :ring {:handler {{name}}.dev-server/handler}
+  :ring {:handler {{name}}.dev.server/handler}
 
   :repl-options {:init-ns {{name}}.repl}
 
