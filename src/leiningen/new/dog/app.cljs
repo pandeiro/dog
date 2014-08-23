@@ -3,8 +3,6 @@
                    [{{name}}.macros :refer [resolve-config]])
   (:require [cljs.core.async :as async :refer [chan put! <! >!]]
             [reagent.core :as r :refer [render-component]]
-            [secretary.core :include-macros true :refer [defroute]]
-            [{{name}}.util.routing :refer [enable-routes]]
             [{{name}}.util.xhr :as xhr :refer [get-edn post-edn! put-edn!]]))
 
 ;; --- Config (imports config.edn)
@@ -12,15 +10,6 @@
 
 ;; --- State
 (def app-state (r/atom {:view :main}))
-
-;; --- Routes
-(defroute "/main" []
-  (swap! app-state assoc :view :main))
-
-(defroute "/options" []
-  (swap! app-state assoc :view :options))
-
-(enable-routes)
 
 ;; --- Views
 (def main-view [:div#main [:h1 "Main View"]])

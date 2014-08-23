@@ -8,8 +8,7 @@
                  [com.googlecode.htmlcompressor/htmlcompressor "1.4"]
                  [org.clojure/clojurescript "0.0-2307"]
                  [org.clojure/core.async "0.1.303.0-886421-alpha"]
-                 [reagent "0.4.2"]
-                 [secretary "1.1.1"]]
+                 [reagent "0.4.2"]]
 
   :source-paths ["src/clj"]
 
