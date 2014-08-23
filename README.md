@@ -72,6 +72,8 @@ If you plan to use configurable URLs that are different in development
 and production, you should first copy `config.edn.sample` to `config.edn`
 (which will be gitignored).
 
+Then, to begin:
+
     cd mywebapp
     ./bin/dev-server
 
