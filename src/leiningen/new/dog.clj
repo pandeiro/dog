@@ -21,6 +21,8 @@
      ["src/clj/{{sanitized}}/dev_server.clj" (render "dev_server.clj" data)]
      ["src/clj/{{sanitized}}/html.clj"       (render "html.clj" data)]
      ["src/clj/{{sanitized}}/macros.clj"     (render "macros.clj" data)]
+     ["src/clj/{{sanitized}}/repl.clj"       (render "repl.clj" data)]
+
      ["src/cljs/{{sanitized}}/app.cljs"      (render "app.cljs" data)]
      ["src/cljs/{{sanitized}}/util/xhr.cljs"     (render "xhr.cljs" data)]
 
