@@ -1,11 +1,7 @@
 (ns {{name}}.dev.server
-  (:require [clojure.string            :as s]
-            [ring.util.response        :as resp-util]
-            [ring.middleware.file      :as file]
+  (:require [ring.middleware.file      :as file]
             [ring.middleware.file-info :as file-util]
-            [ring.middleware.refresh   :as refresh]
-            [clojure.core.async :refer [go chan <! put!]])
-  (:import [java.util Date]))
+            [ring.middleware.refresh   :as refresh]))
 
 (defn base [handler]
   (fn [req] (handler req)))
