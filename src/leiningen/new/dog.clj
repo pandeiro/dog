@@ -15,7 +15,7 @@
     (->files
      data
      ["project.clj"                          (render "project.clj" data)]
-     ["config.edn.sample"                    (render "config.edn" data)]
+     ["config.edn"                           (render "config.edn" data)]
      [".gitignore"                           (render "gitignore" data)]
 
      ["src/clj/{{sanitized}}/dev_server.clj" (render "dev_server.clj" data)]
@@ -39,7 +39,6 @@
       (main/info "")
       (main/info "Development:")
       (main/info (str "cd " (:sanitized data)))
-      (main/info "cp config.edn.sample config.edn")
       (main/info "./bin/dev-server")
       (main/info "")
       (main/info "Distribution:")
