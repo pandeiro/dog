@@ -20,7 +20,7 @@ A Leiningen template for ClojureScript applications
 ## External Dependencies
 
 - [Leiningen](https://github.com/technomancy/leiningen)
-- [Less.js](http://lesscss.org/) CSS preprocessor (for production compilation only)
+- [LessCSS](http://lesscss.org/) CSS preprocessor (for production compilation only)
 
 (JavaScript dependencies, ReactJS and Less.js, are bundled with the template.)
 
