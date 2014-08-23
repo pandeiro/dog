@@ -1,4 +1,4 @@
-(ns {{name}}.repl
+(ns {{name}}.dev.repl
   (:require
    [cemerick.piggieback   :refer [cljs-repl]]
    [weasel.repl.websocket :refer [repl-env]]))
