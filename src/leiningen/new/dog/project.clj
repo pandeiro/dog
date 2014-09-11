@@ -34,7 +34,8 @@
              :source-paths ["src/clj" "src/cljs" "app/vendor"]
              :compiler     {:output-to        "dist/app.js"
                             :optimizations    :advanced
-                            :externs          ["reagent/react.js"]
-                            :preamble         ["reagent/react.min.js"]
+                            :pretty-print     false
+                            :externs          ["react.js"]
+                            :preamble         ["react.min.js"]
                             :closure-warnings {:externs-validation :off
                                                :non-standard-jsdoc :off}}}]})
