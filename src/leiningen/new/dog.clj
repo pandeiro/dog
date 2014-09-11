@@ -10,7 +10,8 @@
   [name]
   (let [data {:name name
               :sanitized (name-to-path name)}
-        less-jar-path "META-INF/resources/webjars/less/1.7.3/less.js"]
+        less-jar-path "META-INF/resources/webjars/less/1.7.3/less.js"
+        react-jar-path "META-INF/resources/webjars/react/0.11.1/"]
     (main/info (str "Generated a new ClojureScript project in " (:sanitized data)))
     (->files
      data
@@ -29,7 +30,8 @@
      ["app/styles/normalize.css"             (render "normalize.css")]
      ["app/styles/main.less"                 (render "main.less")]
      ["app/vendor/less.js"                   (io/reader (io/resource less-jar-path))]
-     ["app/vendor/react.js"                  (io/reader (io/resource "reagent/react.js"))]
+     ["app/vendor/react.js"                  (io/reader (io/resource (str react-jar-path "react.js")))]
+     ["app/vendor/react.min.js"              (io/reader (io/resource (str react-jar-path "react.min.js")))]
      ["app/index.html"                       (render "index-dev.html" data)]
 
      ["bin/dev-server"                       (render "dev-server.bash" data) :executable true]
