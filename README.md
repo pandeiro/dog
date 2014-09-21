@@ -71,9 +71,9 @@ The following project structure will be generated:
     cd mywebapp
     ./bin/dev-server
 
-This will serve the current project at http://localhost:3000,
-auto-compile ClojureScript and auto-refresh on changes to the
-`app` directory.
+This will serve the current project at http://localhost:3000 (or you
+can pass an optional port to `./bin/dev-server`), auto-compile
+ClojureScript and auto-refresh on changes to the `app` directory.
 
 ### Production
 
