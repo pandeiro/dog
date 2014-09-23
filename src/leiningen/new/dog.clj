@@ -38,9 +38,6 @@
     
     (do
       (main/info "")
-      (main/info "Development:")
-      (main/info (str "cd " (:sanitized data)))
-      (main/info "./bin/dev-server")
-      (main/info "")
+      (main/info "Development: `lein dev`")
       (main/info "Distribution:")
       (main/info "./bin/make-dist"))))
