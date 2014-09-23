@@ -19,7 +19,8 @@
 
   :resources-paths ["app"]
 
-  :ring {:handler {{name}}.dev.server/handler}
+  :ring {:handler {{name}}.dev.server/handler
+         :port    3000}
 
   :repl-options {:init-ns {{name}}.dev.repl}
 
