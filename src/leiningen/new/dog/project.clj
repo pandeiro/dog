@@ -15,7 +15,8 @@
   :source-paths ["src/clj"]
 
   :plugins [[lein-cljsbuild "1.0.3"]
-            [lein-ring "0.8.11"]]
+            [lein-ring "0.8.11"]
+            [lein-pdo "0.1.1"]]
 
   :resources-paths ["app"]
 
@@ -39,4 +40,9 @@
                             :externs          ["react.js"]
                             :preamble         ["react.min.js"]
                             :closure-warnings {:externs-validation :off
-                                               :non-standard-jsdoc :off}}}]})
+                                               :non-standard-jsdoc :off}}}]}
+
+  :aliases {"dev" ["pdo"
+                   ["cljsbuild" "clean"]
+                   ["cljsbuild" "auto" "dev"]
+                   ["ring" "server-headless"]]})
