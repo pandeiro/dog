@@ -19,9 +19,6 @@ else
     echo
     echo "Compiling and minifying Less..."
     echo
-    if [ ! -d dist ]; then
-        mkdir dist
-    fi
     try lessc -x app/styles/main.less > dist/styles.css || exit 1
 fi
 
