@@ -37,6 +37,5 @@
      ["bin/make-dist"                        (render "make-dist.bash" data)  :executable true])
     (do
       (main/info "")
-      (main/info "Development: `lein dev`")
-      (main/info "Distribution:")
-      (main/info "./bin/make-dist"))))
+      (main/info "Development:  $ lein dev")
+      (main/info "Distribution: $ ./bin/make-dist"))))
