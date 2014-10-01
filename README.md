@@ -48,7 +48,6 @@ The following project structure will be generated:
     │       ├── less.js
     │       └── react.js
     ├── bin
-    │   ├── dev-server
     │   └── make-dist
     ├── config.edn
     ├── project.clj
@@ -69,10 +68,10 @@ The following project structure will be generated:
 ### Beginning
 
     cd mywebapp
-    ./bin/dev-server
+    lein dev
 
-This will serve the current project at http://localhost:3000 (or you
-can pass an optional port to `./bin/dev-server`), auto-compile
+This will serve the current project at http://localhost:3000 (or whichever
+port is specified at `[:ring :port]` in `project.clj`), auto-compile
 ClojureScript and auto-refresh on changes to the `app` directory.
 
 ### Production
