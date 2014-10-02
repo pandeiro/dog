@@ -12,3 +12,5 @@ config.edn
 *.class
 /.lein-*
 /.nrepl-port
+/.repl
+/out
