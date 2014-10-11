@@ -50,6 +50,7 @@ The following project structure will be generated:
     ├── bin
     │   └── make-dist
     ├── config.edn
+    ├── dist
     ├── project.clj
     └── src
         ├── clj
