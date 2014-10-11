@@ -14,7 +14,7 @@
 
   :source-paths ["src/clj"]
 
-  :plugins [[lein-cljsbuild "1.0.3"]
+  :plugins [[lein-cljsbuild "1.0.4-SNAPSHOT"]
             [lein-ring "0.8.11"]
             [lein-pdo "0.1.1"]]
 
