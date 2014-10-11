@@ -8,10 +8,8 @@
 
 ; (repl/connect "ws://localhost:9001" :verbose true)
 
-(def config (resolve-config))
-
-(def app-state (r/atom {:view  :main
-                        :title (str "Welcome to " "{{name}}")}))
+(def app-state (r/atom {:config (resolve-config)
+                        :view   :main
 
 (defn main-view [state-atom]
   [:div#main
