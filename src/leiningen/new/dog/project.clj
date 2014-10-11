@@ -2,7 +2,7 @@
   :description "Something that does something."
 
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/clojurescript "0.0-2342"]
+                 [org.clojure/clojurescript "0.0-2371"]
                  [org.clojure/core.async "0.1.346.0-17112a-alpha"]
                  [ring/ring-core "1.2.2"]
                  [ring-refresh "0.1.1"]
