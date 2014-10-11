@@ -10,6 +10,7 @@
 
 (def app-state (r/atom {:config (resolve-config)
                         :view   :main
+                        :title  (str "Welcome to {{name}}")}))
 
 (defn main-view [state-atom]
   [:div#main
