@@ -9,7 +9,7 @@
                  [enlive "1.1.5"]
                  [com.googlecode.htmlcompressor/htmlcompressor "1.4"]
                  [com.cemerick/piggieback "0.1.3"]
-                 [weasel "0.4.0-SNAPSHOT"]
+                 [weasel "0.4.2"]
                  [reagent "0.4.3"]]
 
   :source-paths ["src/clj"]
