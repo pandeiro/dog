@@ -1,4 +1,4 @@
-(defproject dog/lein-template "0.5.13"
+(defproject dog/lein-template "0.5.14"
   :description "A template for generating a single-page-app skeleton
 that uses ClojureScript, including core.async and reagent, and the CSS
 pre-processor LessCSS.
