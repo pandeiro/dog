@@ -31,7 +31,7 @@
      ["app/vendor/less.js"                   (io/reader (io/resource less-jar-path))]
      ["app/vendor/react.js"                  (io/reader (io/resource (str react-jar-path "react.js")))]
      ["app/vendor/react.min.js"              (io/reader (io/resource (str react-jar-path "react.min.js")))]
-     ["app/index.html"                       (render "index-dev.html" data)]
+     ["app/index.html"                       (render "app/index.html" data)]
      "dist"
      ["bin/make-dist"                        (render "make-dist.bash" data)  :executable true])
     (do
