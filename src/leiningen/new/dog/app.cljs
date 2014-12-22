@@ -3,8 +3,7 @@
                    [{{name}}.config :refer [resolve-config]])
   (:require [cljs.core.async :as async :refer [chan put! <! >!]]
             [reagent.core :as r :refer [render-component]]
-            [weasel.repl :as repl]
-            [{{name}}.util.xhr :as xhr :refer [get-edn post-edn! put-edn!]]))
+            [weasel.repl :as repl]))
 
 ; (repl/connect "ws://localhost:9001" :verbose true)
 
