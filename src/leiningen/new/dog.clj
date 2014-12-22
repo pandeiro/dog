@@ -17,7 +17,7 @@
      data
      ["project.clj"                          (render "project.clj" data)]
      ["config.edn"                           (render "config.edn" data)]
-     [".gitignore"                           (render "gitignore" data)]
+     [".gitignore"                           (render ".gitignore" data)]
 
      ["src/clj/{{sanitized}}/dev/server.clj" (render "dev_server.clj" data)]
      ["src/clj/{{sanitized}}/dev/html.clj"   (render "html.clj" data)]
