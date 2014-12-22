@@ -2,7 +2,7 @@
   (:require-macros [cljs.core.async.macros :refer [go]]
                    [{{name}}.config :refer [resolve-config]])
   (:require [cljs.core.async :as async :refer [chan put! <! >!]]
-            [reagent.core :as r :refer [render-component]]
+            [reagent.core :as r]
             [weasel.repl :as repl]))
 
 ; (repl/connect "ws://localhost:9001" :verbose true)
@@ -17,7 +17,7 @@
 
 (defn render-app []
   (let [dom-root (.getElementById js/document "root")]
-    (render-component [main-view app-state] dom-root)))
+    (r/render-component [main-view app-state] dom-root)))
 
 (defn init
   "A single entrypoint for the application"
